@@ -1,25 +1,26 @@
     // src/App.jsx
-    import './App.css' // Keep this for now, though Tailwind often replaces much of it
-    import './index.css' // Ensure Tailwind CSS is imported
+    import UrlInput from './components/UrlInput'; // Import our new UrlInput component
+    import './index.css'; // Ensure Tailwind CSS is imported
 
     function App() {
       return (
-        // Tailwind classes applied:
-        // min-h-screen: minimum height of the screen
-        // bg-gray-100: light gray background
-        // flex: enable flexbox for centering
-        // items-center: center items vertically
-        // justify-center: center items horizontally
-        // p-4: padding on all sides
-        <div>
-          <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-            <h1 className="text-5xl font-bold text-indigo-700">
-              Welcome to GrowEasySEO!
-            </h1>
-          </div>
+        // Main application container
+        <div className="min-h-screen bg-lightBg text-textDark font-inter antialiased">
+          {/* We'll add a simple header here */}
+          <header className="bg-primary text-white p-4 shadow-md">
+            <div className="container mx-auto flex justify-between items-center">
+              <h1 className="text-3xl font-bold">GrowEasySEO</h1>
+              {/* Navigation or other elements can go here later */}
+            </div>
+          </header>
+
+          {/* Main content area where our UrlInput component will live */}
+          <main className="py-8">
+            <UrlInput /> {/* Render our UrlInput component here */}
+          </main>
         </div>
-      )
+      );
     }
 
-    export default App
+    export default App;
     
