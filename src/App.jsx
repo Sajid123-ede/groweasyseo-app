@@ -1,26 +1,17 @@
-import { useState } from 'react';
-import './App.css';
-import UrlInput from './components/UrlInput'; // Corrected import path
+import './App.css'; // Or './index.css' depending on your setup
+import UrlInput from './components/UrlInput'; // Correct relative path
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <header className="mb-8 text-center">
-        <h1 className="text-5xl font-extrabold text-blue-600 tracking-tight">
-          GrowEasySEO
-        </h1>
-        <p className="mt-2 text-lg text-gray-600">Your ultimate SEO companion.</p>
-      </header>
-
-      <main className="w-full max-w-2xl bg-white p-8 rounded-lg shadow-xl">
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+      <div className="bg-white p-8 rounded-lg shadow-xl max-w-2xl w-full text-center">
+        <h1 className="text-4xl font-extrabold text-blue-700 mb-4">GrowEasySEO</h1>
+        <p className="text-xl text-gray-600 mb-8">Your ultimate SEO companion.</p>
         <UrlInput />
-      </main>
-
-      <footer className="mt-12 text-center text-gray-500 text-sm">
-        <p>&copy; {new Date().getFullYear()} GrowEasySEO. All rights reserved.</p>
-      </footer>
+        <footer className="mt-8 text-gray-500 text-sm">
+          &copy; 2025 GrowEasySEO. All rights reserved.
+        </footer>
+      </div>
     </div>
   );
 }
